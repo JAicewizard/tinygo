@@ -213,8 +213,8 @@ TEST_PACKAGES = \
 	testing \
 	testing/iotest \
 	text/scanner \
-	text/scanner \
 	unicode \
+	unicode/utf16 \
 	unicode/utf8 \
 
 # Test known-working standard library packages.
