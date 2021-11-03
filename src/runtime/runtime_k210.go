@@ -85,7 +85,7 @@ func handleInterrupt() {
 			// Claim this interrupt.
 			id := kendryte.PLIC.TARGETS[hartId].CLAIM.Get()
 			// Call the interrupt handler, if any is registered for this ID.
-			callInterruptHandler(int(id))
+			kendryte.HandleInterrupt(int(id))
 			// Complete this interrupt.
 			kendryte.PLIC.TARGETS[hartId].CLAIM.Set(id)
 		}
